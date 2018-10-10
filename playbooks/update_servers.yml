@@ -1,9 +1,9 @@
 ---
-- name: Update all servers
+- name: update all servers
   hosts: all_servers
   remote_user: ec2-user
   tasks:
-    - name: update
+    - name: update all packages to latest version
       yum:
         name: '*'
         state: latest
