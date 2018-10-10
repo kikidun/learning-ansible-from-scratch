@@ -1,0 +1,8 @@
+---
+- name: install apache, patch, set an index file and start httpd
+  hosts: new_servers
+  remote_user: ec2-user
+  tasks: 
+    - include_tasks: web_server.yml
+    - include_tasks: update_servers.yml
+
